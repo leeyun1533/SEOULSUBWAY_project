@@ -1,0 +1,61 @@
+#include <stdio.h>
+#define MAX_STATION 400
+#define UNSEEN (-INT_MAX)
+#define TEXT_SIZE 19
+
+typedef struct _node
+{
+    struct _node *next;
+    int number;
+    int weight;
+} node;
+char *numberName[MAX_STATION];
+
+void inputLine(node * station[], int *S, int *P);
+
+FILE *fp;
+int main()
+{
+    int i, S, P, destNumber;
+    
+        node* station[MAX_STATION]; // 각 역의 포인터
+    
+    for (i = 0;  i < MAX_STATION;  i++)
+        numberName[i] = (char*)calloc(TEXT_SIZE,  sizeof(char));
+    
+    inputLine(station, &S, &P);}
+
+void inputLine(node * station[], int *S, int *P)
+
+{ //노선도 입력합수
+    int v1, v2, i, w;
+    node *t;
+    
+    fp=fopen("/Users/leeyun/Downloads/subway/seoul.txt", "r");
+
+    inputLine(station, S, &P);
+    fclose(fp);
+    
+    fscanf(fp, "%d%d", S, P);
+    for(i = 0;  i < *S;  i++)
+        station[i] = NULL;
+    for(i = 0;  i < *P;  i++)
+    {
+        fscanf(fp,"%d%d%d", &v1, &v2, &w);
+        
+        t = (node*)malloc(sizeof(node));
+        t->number = v2;
+        t->weight = w;
+        t->next = station[v1];
+        station[v1] = t;
+        
+        t = (node*)malloc(sizeof(node));
+        t->number = v1;
+        t->weight = w;
+        t->next = station[v2];
+        station[v2] = t;
+        
+        fscanf(fp, "%s%s", numberName[v1], numberName[v2]);
+        printf("%s",numberName[v1]);
+    }
+}
