@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define NAME 50
+
+typedef struct Node {
+	char station[NAME];
+	int Main;
+	int sub;
+	int weigh;
+	struct Node *prev;
+	struct Node *next;
+
+}NODE;
+
+
+
+int main() {
+
+	NODE *head = NULL;
+	NODE *tail = NULL;
+	NODE *new = NULL;
+	int res;
+	FILE *fp;
+	fp = fopen("subway.txt", "r");
+	if (fp == NULL) {
+		printf("파일이없다");
+	}
+	while (1) {
+		new = (NODE*)malloc(sizeof(NODE));
+		res = fscanf(fp, "%d%d%d%s", &new->Main, &new->sub, &new->weigh, new->station);
+		new->next = NULL;
+		new->prev = tail;
+		if (res == EOF)break;
+		if (tail != NULL) {
+			tail->next = new;
+			tail = new;
+		}
+		else {
+			head = new;
+			head->prev = NULL;
+			tail = head;
+		}
+	}	fclose(fp);
+
+	NODE *plist = tail;
+	
+	while (plist != NULL) {
+		printf(" %s", plist->station);
+		plist = plist->prev;
+	}
+
+
+}
