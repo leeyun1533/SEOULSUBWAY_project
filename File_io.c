@@ -8,12 +8,10 @@
 #define _GNU_SOURCE
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "D:\\이정윤\\visual studio\\SeoulSubway\\include\\SeoulSubway.h"
-#include "D:\\이정윤\\visual studio\\SeoulSubway\\include\\mydef.h"
-#include "File_io.h"
+#include  "C:\Users\leejungyun\Documents\Visual Studio 2013\Projects\SeoulSubway\SeoulSubway\SeoulStruct.h"
 
 
-int File_io(Subway *head, Subway *tail, Subway *new, long weigh_data[][MAX], int *s, int *e) {
+int File_io(Subway *station[], Subway *head, Subway *tail, Subway *new, int *s, int *e) {
 
 	
 	
@@ -50,10 +48,10 @@ int File_io(Subway *head, Subway *tail, Subway *new, long weigh_data[][MAX], int
 	}
 
 
-	fp = open("D:\\이정윤\\visual studio\\SeoulSubway\\bin\\subway.txt", O_RDONLY);
+	fp = open("Subway.txt", O_RDONLY);
 	if (fp == -1) {
-		printf("파일이 존재하지않습니다 새로 생성합니다\n");
-		fp = open("D:\\이정윤\\visual studio\\SeoulSubway\\bin\\subway.txt", O_CREAT | O_RDWR, S_IWRITE | S_IREAD);
+		printf("Error\n");
+		fp = open("Subway.txt", O_CREAT | O_RDWR, S_IWRITE | S_IREAD);
 	}
 	n = read(fp, buf,300);
 
@@ -87,19 +85,29 @@ int File_io(Subway *head, Subway *tail, Subway *new, long weigh_data[][MAX], int
 		Spacing_p = strtok(NULL, "\t");
 		str_tol3 = weigh;
 		value3= strtol(str_tol3, &ptr3, 10);
-		Subway_Struct->station[value] = Spacing_p;
+	
 		Spacing_p = strtok(NULL, "\t");
 
 		count++;
 		j++;
 		k++;
 
-		
-		Subway_Struct->weigh[count] = value3;
-		Subway_Struct->Main[count] = value;
-		Subway_Struct->sub[count] = value2;
+		Subway *t;
+		Short_node *p;
+		t = (Subway *)malloc(sizeof(Subway *));
+		t->number = value;
+		t->weight = value3;
+		t->next = station[value];
+		station[value] = t;
 
-		printf("%d %d %d %s\n", Subway_Struct->Main[count], Subway_Struct->sub[count], Subway_Struct->weigh[count], Subway_Struct->station[count]);
+		t = (Subway *)malloc(sizeof(Subway*));
+		t->number = value;
+		t->weight = value3;
+		t->next = station[value2];
+		station[value2];
+		p->numberName[value];
+
+		
 	}
 
 	return Subway_Struct;
