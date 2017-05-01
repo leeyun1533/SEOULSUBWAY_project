@@ -4,7 +4,13 @@
 
 <p>
 Based on C language.
+</p>
 I used low level file I / O to run on Linux.
-The TXT file used for file I / O consists of the ID of the current station, the ID of the next station, and the time to the next station.
-The project took a month.
-</p
+<p>The TXT file used for file I / O consists of the ID of the current station, the ID of the next station, and the time to the next station.</p>
+<p>
+Project period February 15 ~ March 15
+</p>
+
+<p>I hope useful for Learning low lovel file I/O and dijkstra algorithm
+
+
