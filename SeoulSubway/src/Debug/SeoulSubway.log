@@ -1,0 +1,18 @@
+﻿  Administer_mode.c
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(22): warning C4013: 'Administer_print'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(28): warning C4013: 'scanf_s'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(32): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4047: '함수': 'Linked_node *'의 간접 참조 수준이 'Linked_node **'과(와) 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4024: 'Register_line': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4024: 'Register_line': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4024: 'Register_line': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4047: '함수': 'int *'의 간접 참조 수준이 'Linked_node **'과(와) 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(33): warning C4024: 'Register_line': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(38): warning C4013: 'Register_translate_line'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(42): warning C4013: 'Register_weigh_time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(45): warning C4013: 'Register_lesion'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(47): warning C4013: 'Save_file'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(49): warning C4013: 'searchLine'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+d:\이정윤\visual studio\seoulsubway\seoulsubway\src\administer_mode.c(51): warning C4013: 'main'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  SeoulSubway.vcxproj -> D:\이정윤\visual studio\SeoulSubway\SeoulSubway\src\Debug\SeoulSubway.exe
+  SeoulSubway.vcxproj -> D:\이정윤\visual studio\SeoulSubway\SeoulSubway\src\Debug\SeoulSubway.pdb (Full PDB)
